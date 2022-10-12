@@ -60,17 +60,11 @@ tk.Label(root, text='"SRV - Login" Tool by -TOXIC-#1835', font=("Consolas", 6),
          fg="#ff0000", bg="#000000").pack(side="bottom")
 if not ipCheck():
     tk.Label(root, text="OPTIONS ONLY FOR THE OWNER!", fg="#ff0000", bg="#000000", font=("Berlin Sans FB", 20)).pack()
-    time.sleep(1)
     tk.Label(root, text="OPTIONS ONLY FOR THE OWNER!", fg="#ff0000", bg="#000000", font=("Berlin Sans FB", 20)).pack()
-    time.sleep(1)
     tk.Label(root, text="OPTIONS ONLY FOR THE OWNER!", fg="#ff0000", bg="#000000", font=("Berlin Sans FB", 20)).pack()
-    time.sleep(1)
     tk.Label(root, text="OPTIONS ONLY FOR THE OWNER!", fg="#ff0000", bg="#000000", font=("Berlin Sans FB", 20)).pack()
-    time.sleep(1)
     tk.Label(root, text="OPTIONS ONLY FOR THE OWNER!", fg="#ff0000", bg="#000000", font=("Berlin Sans FB", 20)).pack()
-    time.sleep(1)
     tk.Label(root, text="OPTIONS ONLY FOR THE OWNER!", fg="#ff0000", bg="#000000", font=("Berlin Sans FB", 20)).pack()
-    time.sleep(1)
     tk.Label(root, text="OPTIONS ONLY FOR THE OWNER!", fg="#ff0000", bg="#000000", font=("Berlin Sans FB", 20)).pack()
     while True:
         messagebox.showerror(title="FATAL ERROR!", message="This tool is only for the owner of this tool!\n\n"
