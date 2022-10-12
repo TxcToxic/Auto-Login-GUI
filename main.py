@@ -1,3 +1,6 @@
+# Shouldn't be opensource but now you can use it
+# By -TOXIC-#1835 <3
+
 import tkinter as tk
 from tkinter import messagebox
 from selenium import webdriver
@@ -13,21 +16,21 @@ def ipCheck():
     except:
         return False
     args = ip.split(".")
-    if not f"{args[0]}.{args[1]}" == "0.0":
+    if not f"{args[0]}.{args[1]}" == "0.0":  # first 2 sectors of the owners ip (e.g. 45.185)
         return False
     else:
         return True
 
 
 def proxmoxLogin():
-    username = "******"
-    password = "******"
-    url = "http://proxmox.gtav-online-community.com/"
-    driver = webdriver.Chrome("./bin/chromedriver.exe")
+    username = "******"  # The user (if you're the node owner it would have to be "root")
+    password = "******"  # The password (of your account)
+    url = "http://proxmox.gtav-online-community.com/"  # your proxmox url can also be an IP-Address
+    driver = webdriver.Chrome("./bin/chromedriver.exe")  # this is REQUIRED! (download: https://chromedriver.chromium.org/downloads)
     driver.set_window_size(height=1000, width=1500)
     driver.get(url)
-    driver.find_element(By.XPATH, '//*[@id="details-button"]').click()
-    driver.find_element(By.XPATH, '//*[@id="proceed-link"]').click()
+    driver.find_element(By.XPATH, '//*[@id="details-button"]').click()  # This both elements are to skip the "This site is not secure" screen
+    driver.find_element(By.XPATH, '//*[@id="proceed-link"]').click()  # This both elements are to skip the "This site is not secure" screen
     time.sleep(.5)
     driver.find_element(By.XPATH, '//*[@id="textfield-1062-inputEl"]').send_keys(username)
     driver.find_element(By.XPATH, '//*[@id="textfield-1063-inputEl"]').send_keys(password)
@@ -53,7 +56,7 @@ root.maxsize(height=500, width=550)
 root.configure(bg="#000000")
 
 tk.Label(root, text="SRV - Login", font=("Berlin Sans FB", 25), bg="#000000", fg="#5c009e").pack()
-tk.Label(root, text='"SRV - Login" Tool by -TOXIC-#1835', font=("Arial", 6),
+tk.Label(root, text='"SRV - Login" Tool by -TOXIC-#1835', font=("Consolas", 6),
          fg="#ff0000", bg="#000000").pack(side="bottom")
 if not ipCheck():
     tk.Label(root, text="OPTIONS ONLY FOR THE OWNER!", fg="#ff0000", bg="#000000", font=("Berlin Sans FB", 20)).pack()
